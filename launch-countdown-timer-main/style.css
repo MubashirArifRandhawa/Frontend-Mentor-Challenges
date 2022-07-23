@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --grayish-blue: hsl(237, 18%, 59%);
+  --brownish-black: rgba(30, 30, 40, 255);
+  --blueish-black: rgba(36, 30, 44, 255);
+  --soft-red: hsl(345, 95%, 68%);
+  --white: hsl(0, 0%, 100%);
+  --dark-desaturated-blue: hsl(236, 21%, 26%);
+  --very-dark-blue: hsl(235, 16%, 14%);
+  /* (mostly black)  */
+  --very-dark-blue-black: hsl(234, 17%, 12%);
+}
+body {
+  background: url("./images/pattern-hills.svg"), url("./images/bg-stars.svg"),
+    linear-gradient(var(--brownish-black), var(--blueish-black));
+  background-repeat: no-repeat, repeat, repeat;
+  background-size: contain;
+  background-position: bottom, top, top;
+  min-height: 100vh;
+
+  font-size: 14px;
+  font-family: "Red Hat Text", sans-serif;
+}
+main {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+.container {
+  min-width: 700px;
+  margin-bottom: 100px;
+}
+.header {
+  text-transform: uppercase;
+  margin-bottom: 100px;
+  color: white;
+  text-align: center;
+  letter-spacing: 0.3rem;
+}
+.timer__container {
+  display: flex;
+  gap: 2em;
+  min-width: 400px;
+  justify-content: space-evenly;
+}
+.val {
+  width: 120px;
+  height: 110px;
+  background: linear-gradient(
+    rgba(44, 44, 68, 255) 50%,
+    rgba(52, 54, 79, 255) 50%
+  );
+  font-size: 3.4rem;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0 7px var(--very-dark-blue-black);
+  margin-bottom: 0.3em;
+  color: var(--soft-red);
+  font-weight: bold;
+}
+.val::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(var(--brownish-black), var(--blueish-black));
+}
+.val::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: translate(0, -50%);
+  background: linear-gradient(var(--brownish-black), var(--blueish-black));
+}
+.tag {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--grayish-blue);
+  letter-spacing: 0.3rem;
+  font-weight: bold;
+}
+footer {
+  max-width: 100px;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  min-width: 150px;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  cursor: pointer;
+}
+.contact {
+  width: 24px;
+  height: 24px;
+}
+.contact:hover {
+  filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg)
+    brightness(104%) contrast(97%);
+}
+@media screen and (max-width: 30em) {
+  body {
+    background: url("./images/pattern-hills.svg"), url("./images/bg-stars.svg"),
+      linear-gradient(var(--brownish-black), var(--blueish-black));
+    background-repeat: no-repeat, repeat, repeat;
+    background-size: 100% 20%, 100%, 100%;
+    background-position: bottom, top, top;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-size: 14px;
+    font-family: "Red Hat Text", sans-serif;
+    overflow: hidden;
+  }
+  .header {
+    font-size: 1rem;
+  }
+  .container {
+    min-width: 300px;
+  }
+  .timer__container {
+    display: flex;
+    min-width: 300px;
+    gap: 0.625rem;
+    justify-content: space-evenly;
+    padding: 0 10px;
+  }
+  .val {
+    max-width: 75px;
+    max-height: 70px;
+    background: linear-gradient(
+      rgba(44, 44, 68, 255) 50%,
+      rgba(52, 54, 79, 255) 50%
+    );
+    font-size: 2rem;
+    display: grid;
+    place-items: center;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0 7px var(--very-dark-blue-black);
+    margin-bottom: 0.3em;
+    color: var(--soft-red);
+    font-weight: bold;
+  }
+  .val::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(var(--brownish-black), var(--blueish-black));
+  }
+  .val::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: -10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    transform: translate(0, -50%);
+    background: linear-gradient(var(--brownish-black), var(--blueish-black));
+  }
+  .tag {
+    text-align: center;
+    font-size: 0.6rem;
+  }
+}

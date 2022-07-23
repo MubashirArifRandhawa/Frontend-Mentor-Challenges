@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  /* (paragraphs) */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  /*  (background, headings, buttons) */
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+body {
+  font-size: 0.9375em;
+}
+main {
+  background: var(--very-light-gray);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lexend Deca", sans-serif;
+  padding: 1rem 1rem;
+}
+.card__wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 300px);
+  grid-template-rows: repeat(3, 430px);
+  margin: 3rem 0;
+}
+.card {
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr 1fr;
+  padding: 3em 3em;
+}
+.card p {
+  color: var(--transparent-white);
+}
+.card h1 {
+  color: var(--very-light-gray);
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.3rem;
+}
+.card button {
+  padding: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.75px 0.25px;
+  height: 44px;
+  width: 20ch;
+  background: var(--very-light-gray);
+  border-radius: 50px;
+  font-weight: 500;
+}
+.card button:hover {
+  border: 3px solid var(--very-light-gray);
+  background: transparent;
+  color: var(--very-light-gray);
+  transition: background 250ms linear, color 250ms linear;
+}
+.luxury__card {
+  background: var(--very-dark-cyan);
+  border-radius: 0px 0px 10px 10px;
+}
+.suvs__card {
+  background: var(--dark-cyan);
+}
+.sedan__card {
+  background: var(--bright-orange);
+  border-radius: 10px 10px 0px 0px;
+}
+.luxury__btn {
+  color: var(--very-dark-cyan);
+}
+.sedan_btn {
+  color: var(--bright-orange);
+}
+.suvs__btn {
+  color: var(--dark-cyan);
+}
+@media screen and (min-width: 40em) {
+  .card__wrapper {
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(1, 500px);
+    margin: 1rem 0;
+  }
+  .luxury__card {
+    border-radius: 0px 10px 10px 0px;
+  }
+  .sedan__card {
+    border-radius: 10px 0px 0px 10px;
+  }
+}
