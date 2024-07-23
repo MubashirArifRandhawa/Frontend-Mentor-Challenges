@@ -28,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/MubashirArifRandhawa/Frontend-Mentor-Challenges)
-- Live Site URL: [Add live site URL here](embarrassed-cattle-challenge.surge.sh)
+- Live Site URL: [Add live site URL here](http://embarrassed-cattle-challenge.surge.sh)
 
 ## My process
 
